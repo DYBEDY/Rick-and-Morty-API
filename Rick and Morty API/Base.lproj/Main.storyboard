@@ -55,9 +55,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="imageOfPerson" destination="XkH-H1-bsf" id="hUR-tb-Gyd"/>
-                                    <outlet property="nameOfPersonLabel" destination="duK-qn-Xbz" id="jVl-S5-VVV"/>
-                                    <outlet property="typeOfPersonLabel" destination="aGu-OP-XdS" id="zEV-at-Bnu"/>
+                                    <outlet property="imageOfPerson" destination="XkH-H1-bsf" id="UPB-oF-2N2"/>
+                                    <outlet property="nameOfPersonLabel" destination="duK-qn-Xbz" id="PWm-V5-rdg"/>
+                                    <outlet property="typeOfPersonLabel" destination="aGu-OP-XdS" id="Pqz-3Z-ZcH"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -20,11 +20,15 @@ class MainViewController: UITableViewController {
 // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        1
+        persons.count
     }
-
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        persons.count
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RickMortyCell", for: indexPath) as! RickMortyCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Rick", for: indexPath) as! RickMortyCell
 
         let person = persons[indexPath.row]
         cell.configure(with: person)
