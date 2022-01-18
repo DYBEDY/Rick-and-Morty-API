@@ -17,10 +17,10 @@ struct RickAndMorty: Decodable {
 struct Results: Decodable{
     let id: Int?
     let name: String?
-    let status: Status?
-    let species: Species?
+    let status: String?
+    let species: String?
     let type: String?
-    let gender: Gender?
+    let gender: String?
     let origin: Location?
     let location: Location?
     let image: String?
