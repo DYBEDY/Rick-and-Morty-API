@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Все на месте-->
         <scene sceneID="EVS-Mg-cRP">
             <objects>
                 <tableViewController id="8F9-oZ-Vpd" customClass="MainViewController" customModule="Rick_and_Morty_API" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Rick" rowHeight="112" id="CCU-pP-O33" customClass="RickMortyCell" customModule="Rick_and_Morty_API" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="rick" rowHeight="112" id="CCU-pP-O33" customClass="RickMortyCell" customModule="Rick_and_Morty_API" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="112"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CCU-pP-O33" id="QfV-2l-HmS">
@@ -66,10 +66,11 @@
                             <outlet property="delegate" destination="8F9-oZ-Vpd" id="V1N-2B-hza"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Все на месте" id="H7C-St-fDO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8v6-8b-6fd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="155.07246376811597" y="-9.375"/>
+            <point key="canvasLocation" x="1065.217391304348" y="-9.375"/>
         </scene>
     </scenes>
     <resources>

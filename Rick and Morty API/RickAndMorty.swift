@@ -11,7 +11,6 @@ import Foundation
 
 
 struct RickAndMorty: Decodable {
-    let info: AllinfoAboutMorty?
     let results: [Results]?
 }
 
@@ -22,7 +21,7 @@ struct Results: Decodable{
     let species: Species?
     let type: String?
     let gender: Gender?
-    let origin: Origin?
+    let origin: Location?
     let location: Location?
     let image: String?
     let episode: [String]?
@@ -59,8 +58,5 @@ struct Location: Decodable {
     let url: String?
 }
 
-struct Origin: Decodable {
-    let name: String?
-    let url: String?
-}
+
 

@@ -20,13 +20,13 @@ class RickMortyCell: UITableViewCell {
         
         DispatchQueue.global().async {
             guard let url = URL(string: person.image ?? "" ) else { return }
-            guard let imageData = try?Data(contentsOf: url) else { return }
+            guard let imageData = try? Data(contentsOf: url) else { return }
             
             DispatchQueue.main.async {
                 self.imageOfPerson.image = UIImage(data: imageData)
             }
             
-        }
+        } 
     }
     
 }
