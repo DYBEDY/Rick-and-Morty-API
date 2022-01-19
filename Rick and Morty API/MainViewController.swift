@@ -11,8 +11,8 @@ class MainViewController: UITableViewController {
    private var persons: RickAndMorty?
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 150
-        fetchPerson()
+        tableView.rowHeight = 160
+        fetchData()
     }
 
 // MARK: - Table view data source
@@ -31,26 +31,20 @@ class MainViewController: UITableViewController {
 
 }
 
-    func fetchPerson() {
-        guard let url = URL(string: "https://rickandmortyapi.com/api/character") else { return }
-        
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data = data else {
-                print(error?.localizedDescription ?? "No error description")
-                return
+    private func fetchData() {
+        NetworManager.shared.fetch(dataType: RickAndMorty.self, from: "https://rickandmortyapi.com/api/character") { result in
+            switch result {
+            case .success(let person):
+                self.persons = person
+                self.tableView.reloadData()
+                print(person)
+            case .failure(let error):
+                print(error)
             }
-            
-            do {
-                self.persons = try JSONDecoder().decode(RickAndMorty.self, from: data)
-                print(self.persons ?? 0)
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            } catch {
-                print(error.localizedDescription)
-            }
-            
-        } .resume()
+        }
     }
+    
+ 
+
 }
 

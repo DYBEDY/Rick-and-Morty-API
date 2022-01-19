@@ -11,10 +11,20 @@ class RickMortyCell: UITableViewCell {
     
     @IBOutlet var nameOfPersonLabel: UILabel!
     @IBOutlet var typeOfPersonLabel: UILabel!
-    @IBOutlet var imageOfPerson: UIImageView!
+    @IBOutlet var imageOfPerson: UIImageView! {
+        didSet {
+            
+            imageOfPerson.contentMode = .scaleAspectFit
+            imageOfPerson.clipsToBounds = true
+            imageOfPerson.layer.cornerRadius = imageOfPerson.frame.height / 2
+            imageOfPerson.backgroundColor = .white
+        }
+    }
     @IBOutlet var genderLabel: UILabel!
     @IBOutlet var speciesLabel: UILabel!
     @IBOutlet var statusLabel: UILabel!
+    
+    
     
     
     
@@ -24,6 +34,7 @@ class RickMortyCell: UITableViewCell {
         genderLabel.text = person?.gender
         speciesLabel.text = person?.species
         statusLabel.text = person?.status
+        
         
         DispatchQueue.global().async {
             guard let url = URL(string: person?.image ?? "" ) else { return }
