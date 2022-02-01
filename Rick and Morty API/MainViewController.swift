@@ -26,7 +26,7 @@ class MainViewController: UITableViewController {
 
         let person = persons?.results?[indexPath.row]
         cell.configure(with: person)
-
+        
         return cell
 
 }
